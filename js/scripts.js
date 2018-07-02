@@ -1,5 +1,3 @@
-var ranges = [];
-var selection;
 var color;
 var atLeast1Heading = false;
 var thereIsFontTag = false;
@@ -9,14 +7,16 @@ var thereIsFontTag = false;
 $(function () {
 
 
-    function check_style()
+    // Ajoute ou retire la classe active :
+    //--------------------------------------------------
+
+    function check_style_for_buttons()
     {
         thereIsFontTag = false;
         $(".icone").removeClass("active");
         selection = window.getSelection();
         $('option').removeAttr('selected');
         atLeast1Heading = false;
-        // $(this).parentNode()
 
         var Node = selection.baseNode.parentNode;
 
@@ -52,9 +52,7 @@ $(function () {
                     if (Node.tagName[0] == 'H')
                         atLeast1Heading = true;
                     break;
-
             }
-
             Node = Node.parentNode;
         }
         check_align(Node);
@@ -64,7 +62,6 @@ $(function () {
 
         if(!thereIsFontTag) {
             $("#colorWell").val("#000");
-
         }
 
     }
@@ -100,6 +97,9 @@ $(function () {
     // }
 
 
+    // Application du style :
+    //------------------------------------
+
     function applyStyle(style) {
 
         var val = "";
@@ -109,10 +109,11 @@ $(function () {
         if (style == "insertImage")
             val = prompt('Saississez une url d\'image:');
 
-        // document.execCommand(style);
         document.execCommand(style, false,val);
     }
 
+    // Vérification si text-align a une valeur :
+    //--------------------------------------------
 
     function check_align(Node) {
         $(".justifyLeft").removeClass("active");
@@ -166,9 +167,6 @@ $(function () {
     }
 
 
-
-
-
     function startup() {
         colorWell = document.querySelector("#colorWell");
         colorWell.value = defaultColor;
@@ -202,7 +200,7 @@ $(function () {
     });
 
     $("#main").on("click", function() {
-        check_style();
+        check_style_for_buttons();
     });
 
 
@@ -212,7 +210,7 @@ $(function () {
         applyStyle(action);
 
         // maintainCaretonPositionIfNoSelection()
-        check_style();
+        check_style_for_buttons();
         // if (NoTextWasSelected())
         //     maintainCaretPosition();
             
