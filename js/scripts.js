@@ -8,15 +8,7 @@ var thereIsFontTag = false;
 
 $(function () {
 
-    var colorWell;
-    var defaultColor = "#0000ff";
 
-    window.addEventListener("load", startup, false);
-
-    $('#textarea').on('input', function(){
-        console.log(this);
-        // console.log(getCaretPosition(this));
-    });
     function check_style()
     {
         thereIsFontTag = false;
@@ -24,6 +16,7 @@ $(function () {
         selection = window.getSelection();
         $('option').removeAttr('selected');
         atLeast1Heading = false;
+        // $(this).parentNode()
 
         var Node = selection.baseNode.parentNode;
 
@@ -134,6 +127,9 @@ $(function () {
             case 'center':
                 $(".justifyCenter").addClass("active");break;
 
+            case 'left':
+                $(".justifyLeft").addClass("active");break;
+
             case '':
                 if (!$(".justifyRight").hasClass("active") &&
                     !$(".justifyCenter").hasClass("active") &&
@@ -191,11 +187,21 @@ $(function () {
         document.execCommand("foreColor", false,color);
     }
 
+    var colorWell;
+    var defaultColor = "#0000ff";
+
+    window.addEventListener("load", startup, false);
+
+    $('#main').on('input', function(){
+        console.log(this);
+        // console.log(getCaretPosition(this));
+    });
+
     $('#heading').on("change", function() {
         document.execCommand("formatBlock", false,"<" + $(this).val() + ">");
     });
 
-    $("#textarea").on("click", function() {
+    $("#main").on("click", function() {
         check_style();
     });
 
