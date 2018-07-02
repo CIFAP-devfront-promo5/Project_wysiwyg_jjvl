@@ -1,6 +1,6 @@
-# Project_wysiwyg_jjvl
+# EasyWIG
 
-<!-- //RESAISIR EN ANGLAIS// -->
+<!--  //décrire en anglais// -->
 
 ## DESCRIPTION
 Nous proposons un site WYSIWYG composé comme suit :
@@ -20,10 +20,13 @@ fonctionnalités :
 .effacer les styles de votre texte
 
 
+
 ## Usage
 
 <!-- //Décrire les éléments dynamique JS//
  -->
+
+ 
 
 ## License
 28 june to 5 july 2018
