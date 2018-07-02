@@ -45,6 +45,7 @@ header {
       header #tools ul li.first {
         width: 200px; }
       header #tools ul li {
+        vertical-align: bottom;
         display: inline-block;
         list-style-type: none;
         background: #ccc;
@@ -101,6 +102,5 @@ header {
   border-box: none; }
 
 .unselectable {
-  -moz-user-select:none;
-  -webkit-user-select:none;
-}
+  -moz-user-select: none;
+  -webkit-user-select: none; }
