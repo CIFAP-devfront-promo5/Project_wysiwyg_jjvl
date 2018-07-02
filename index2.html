@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wysiwyg</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <section id="premiere">
+                <div id="haut">
+                    <ul>
+                        <li><a href="">Visuel</a></li>
+                        <li class="fonce"><a href="">Code</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="tools">
+                    <ul>
+                        <li class="first">
+                            <select class="heading">
+                                <option value="P">Paragraphe</option>
+                                <option value="H1">Titre 1</option>
+                                <option value="H2">Titre 2</option>
+                                <option value="H3">Titre 3</option>
+                                <option value="H4">Titre 4</option>
+                            </select>
+                        </li>
+                        <li class="icone bold" data-title="afficher en gras"><a href="#"></a><i class="glyphicon glyphicon-bold"></i></li>
+                        <!-- rajout classe ctive -->
+                        <li class="icone italic" data-title=" afficher en italic"><a href="#"></a><i class="glyphicon glyphicon-italic"></i> </li>
+                        <li class="icone insertUnorderedList" data-title="list non ordoner"><a href="#"></a><i class="fas fa-list-ul"></i></li>
+                        <li class="icone insertOrderedList" data-title="liste ordoner"><a href="#"></a><i class="fas fa-list-ol"></i></li>
+                        <li class="icone justifyLeft" data-title="aligner a gauche"><a href="#"></a><i class="glyphicon glyphicon-align-left"></i></li>
+                        <li class="icone justifyCenter" data-title="centre"><a href="#"></a><i class="glyphicon glyphicon-align-center"></i></li>
+                        <li class="icone JustifyRight" data-title="alignera droite"><a href="#"></a><i class="glyphicon glyphicon-align-right"></i></li>
+                        <li class="icone justifyFull" data-title="justifier"><a href="#"></a><i class="glyphicon glyphicon-align-justify"></i></li>
+                        <li class="icone createLink" data-title="creer un lien"><a href="#"></a><i class="fas fa-link"></i></li>
+                        <li class="icone unlink" data-title="effacer un lien"><a href="#"></a><i class="fas fa-unlink"></i></li>
+                        <li class="icone foreColor" data-title="color picker"><a href="#"></a><i class="glyphicon glyphicon-font"></i></li>
+                        <li class="icone insertImage"><a href="#"></a><i class="glyphicon glyphicon-picture" data-title="image"></i></li>
+                        <li class="icone removeFormat" data-title=" effacer"><a href="#"></a><i class="glyphicon glyphicon-erase"></i></li>
+                        <input type="color" value="#ff0000" id="colorWell" class="toto">
+                    </ul>
+            </section>
+        </header>
+        <section id="main" contenteditable>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+
+</html>

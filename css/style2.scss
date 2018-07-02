@@ -1,0 +1,144 @@
+body{
+	
+	#container{
+		max-width:1000px; //rajout de julie//
+		width:100%;//rajout de julie//
+		height:90vh;
+		margin: 20px auto;
+	}
+}
+
+header{
+	height:auto;//modif de julie//
+	width: 100%;
+	background:#ccc;
+	#premiere{
+		background:#fff;
+	}
+	#haut{
+		 ul{
+		  	display:flex;
+			justify-content:flex-end;	
+			
+			li{ //modif de julie//
+				list-style-type: none;
+				margin:0;
+				padding-top:9px;
+				font-weight:bolder;
+				border:1px solid transparent;
+				width: 105px;
+				height:60px;
+				text-align:center;
+				background:#ccc;
+				justify-content:flex-end;
+				border-radius: 5px 5px 0 0;
+
+				a{ //rajout de julie//
+					font-size: 20px;
+					font-weight: bold;
+					color: #000;
+				}		
+			}
+		}
+	}
+
+	#haut .fonce{ //rajout de julie//
+		background-color:#96989e;
+	}
+	#tools{ //modif de julie//
+		display:flex;
+		aline-items:center;
+		margin-top:8px;
+		justify-content: flex-start;
+		
+		ul{ //menu//  //modif de julie//
+			padding:0;
+			padding-left:15px;
+			padding-top: 10px;
+			display: inline-block;
+			margin-right:15px;
+			// list-style-type: none;
+		
+
+			li.first{
+					width:200px;
+			}
+
+			li{
+				display: inline-block;
+				list-style-type: none;	
+				background:#ccc;
+				margin-top:0;
+				margin-right:3px;
+				border: 1px solid transparent;
+				height:50px;
+				width:65px;
+				font-weight:bolder;
+
+				
+			}			
+		}
+
+		input[type=text], select { //rajout de julie//
+	      	text-align: center;
+	      	text-align-last: center;    
+	    }
+		select{ //modif de julie//
+			width: 200px;
+			height:45px;
+			border:none;
+		
+			option{ //rajout de julie//
+					padding-left: 30px;
+					font-size: 28px;
+					padding-top:30px;
+					text-align: center;
+			}
+		}
+		.icone{ //rajout de julie//
+			cursor:pointer;
+		}
+		.icone:hover{ //rajout de julie//
+			border: 1px solid #96989e;
+			border-radius:5px;
+		}
+
+		.icone.active{ //rajout de julie//
+			background:#96989e;
+			border-radius:5px;
+		}
+
+		i{ //rajout de julie//
+			padding-left:21px;
+			padding-top:10px;
+			box-sizing:border-box;
+			font-size:25px;
+		}
+		a{
+			text-decoration:none;
+		}
+		input{ //color picker//
+		margin-top: -14px;
+		margin-left: 13px;
+		border: none;
+		background-color:#ccc;
+		height: 15px;
+			.toto{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			}
+		}
+
+	}
+		
+	
+}
+#main{
+	overflow-y:scroll;
+	height:500px;
+	width:100%;
+	font-size:20px;
+	border:2px solid black;
+	border-box: none;
+}
