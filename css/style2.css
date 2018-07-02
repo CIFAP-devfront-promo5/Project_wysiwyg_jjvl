@@ -99,3 +99,8 @@ header {
   font-size: 20px;
   border: 2px solid black;
   border-box: none; }
+
+.unselectable {
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
