@@ -19,18 +19,18 @@
             <section id="premiere">
                 <div id="haut">
                     <ul>
-                        <li>
-                            <a href="">Visuel</a>
+                        <li unselectable="on" class="activeOnglet visuel">
+                            Visuel
                         </li>
-                        <li unselectable="on" class="fonce">
-                            <a href="">Code</a>
+                        <li unselectable="on" class="inactiveOnglet code">
+                           Code
                         </li>
                     </ul>
                 </div>
             </section>
             <section id="tools">
                 <ul>
-                    <li unselectable="on" class="first unselectable">
+                    <li unselectable="on" class="first">
                         <select class="heading">
                             <option value="P">Paragraphe</option>
                             <option value="H1">Titre 1</option>
@@ -39,78 +39,79 @@
                             <option value="H4">Titre 4</option>
                         </select>
                     </li>
-                    <li unselectable="on" class="icone bold unselectable"
-                        data-title="afficher en gras">
+                    <li unselectable="on" class="icone bold"
+                        data-title="Afficher en gras">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-bold"></i>
                     </li>
-                    <!-- rajout classe ctive -->
-                    <li unselectable="on" class="icone italic unselectable"
-                        data-title=" afficher en italic">
+                    <li unselectable="on" class="icone italic"
+                        data-title=" Afficher en italique">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-italic"></i>
                     </li>
                     <li unselectable="on"
-                        class="icone insertUnorderedList unselectable"
-                        data-title="list non ordoner">
+                        class="icone insertUnorderedList"
+                        data-title="Liste à puce">
                         <a href="#"></a>
                         <i class="fas fa-list-ul"></i>
                     </li>
                     <li unselectable="on"
-                        class="icone insertOrderedList unselectable"
-                        data-title="liste ordoner">
+                        class="icone insertOrderedList"
+                        data-title="Liste ordonnée">
                         <a href="#"></a>
                         <i class="fas fa-list-ol"></i>
                     </li>
-                    <li unselectable="on" class="icone justifyLeft unselectable"
-                        data-title="aligner a gauche">
+                    <li unselectable="on" class="icone justifyLeft"
+                        data-title="Aligner à gauche">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-align-left"></i>
                     </li>
                     <li unselectable="on"
-                        class="icone justifyCenter unselectable"
-                        data-title="centre">
+                        class="icone justifyCenter"
+                        data-title="Centrer">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-align-center"></i>
                     </li>
                     <li unselectable="on"
-                        class="icone justifyRight unselectable"
-                        data-title="alignera droite">
+                        class="icone justifyRight"
+                        data-title="Aligner à droite">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-align-right"></i>
                     </li>
-                    <li unselectable="on" class="icone justifyFull unselectable"
-                        data-title="justifier">
+                    <li unselectable="on" class="icone justifyFull"
+                        data-title="Justifier">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-align-justify"></i>
                     </li>
-                    <li unselectable="on" class="icone createLink unselectable"
-                        data-title="creer un lien">
+                    <li unselectable="on" class="icone createLink"
+                        data-title="Insérer un lien">
                         <a href="#"></a>
                         <i class="fas fa-link"></i>
                     </li>
-                    <li unselectable="on" class="icone unlink unselectable"
-                        data-title="effacer un lien">
+                    <li unselectable="on" class="icone unlink"
+                        data-title="Supprimer le lien">
                         <a href="#"></a>
                         <i class="fas fa-unlink"></i>
                     </li>
-                    <li unselectable="on" class="icone foreColor unselectable"
-                        data-title="color picker">
-                        <a href="#"></a>
-                        <i class="glyphicon glyphicon-font"></i>
-                        <input type="color" value="#ff0000" id="colorWell"
-                               class="toto">
+                    <li unselectable="on" class="icone foreColor"
+                        data-title="Couleur du texte">
+                 <!--        <a href="#"></a> -->
+                        <i class="glyphicon glyphicon-font letter">
+                            <input type="color" value="#ff0000" id="colorWell"
+                        class="toto">  
+                        </i>
+                          
                     </li>
                     <li unselectable="on"
-                        class="icone insertImage unselectable">
+                        class="icone insertImage">
                         <a href="#"></a>
                         <i
                                 class="glyphicon glyphicon-picture"
-                                data-title="image"></i>
+                                data-title="Insérer une image"></i>
                     </li>
                     <li unselectable="on"
-                        class="icone removeFormat unselectable"
-                        data-title=" effacer">
+                        class="icone removeFormat"
+                        data-title=" Effacer le style">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-erase"></i>
                     </li>
@@ -118,9 +119,6 @@
                 </ul>
             </section>
         </header>
-        <div id="paragraphe">
-            <p id="info"></p>
-        </div>
         <section id="main" contenteditable>
         </section>
     </div>
@@ -133,8 +131,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/infobull.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/infobull.js"></script>
+
     
 </body>
 

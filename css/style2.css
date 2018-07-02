@@ -27,13 +27,21 @@ header {
       border-radius: 5px 5px 0 0; }
       header #haut ul li a {
         font-size: 20px;
+        text-decoration: none;
         font-weight: bold;
         color: #000; }
-  header #haut .fonce {
-    background-color: #96989e; }
+  header #haut .inactiveOnglet {
+    background-color: #96989e !important; }
+  header .activeOnglet {
+    background-color: #cccccc !important; }
+  header .visuel, header .code {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000; }
   header #tools {
     display: flex;
-    aline-items: center;
+    align-items: center;
     margin-top: 8px;
     justify-content: flex-start; }
     header #tools ul {
@@ -64,9 +72,7 @@ header {
       border: none; }
       header #tools select option {
         padding-left: 30px;
-        font-size: 28px;
-        padding-top: 30px;
-        text-align: center; }
+        font-size: 28px; }
     header #tools .icone {
       cursor: pointer; }
     header #tools .icone:hover {
@@ -80,18 +86,20 @@ header {
       padding-top: 10px;
       box-sizing: border-box;
       font-size: 25px; }
+      header #tools i i.letter {
+        padding-left: 3px !important; }
     header #tools a {
       text-decoration: none; }
     header #tools input {
-      margin-top: -14px;
-      margin-left: 13px;
       border: none;
       background-color: #ccc;
-      height: 15px; }
-      header #tools input .toto {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start; }
+      height: 15px;
+      width: 35px;
+      display: flex; }
+    header #tools .foreColor {
+      margin-top: 10px;
+      height: 60px;
+      vertical-align: bottom; }
 
 #main {
   overflow-y: scroll;
@@ -101,6 +109,17 @@ header {
   border: 2px solid black;
   border-box: none; }
 
-.unselectable {
+ul li {
   -moz-user-select: none;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+  position: relative; }
+
+.tooltip_ {
+  background: #000;
+  color: #fff;
+  width: 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  position: absolute;
+  top: 50px;
+  z-index: 2; }

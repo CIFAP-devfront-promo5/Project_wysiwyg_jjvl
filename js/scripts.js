@@ -197,7 +197,7 @@ $(function () {
         // console.log(getCaretPosition(this));
     });
 
-    $('#heading').on("change", function() {
+    $('.heading').on("change", function() {
         document.execCommand("formatBlock", false,"<" + $(this).val() + ">");
     });
 
