@@ -83,9 +83,9 @@ $(function () {
         // Si on n'a trouvé aucun font en parcourant les nodes de la selection,
         // c'est que la couleur du texte est noir (valeur par défaut)
 
-        if (!FontTagFound) {
-            $("#colorWell").val("#000");
-        }
+        // if (!FontTagFound) {
+        //     $("#colorWell").val("#F00ff");
+        // }
 
     }
 
@@ -361,10 +361,13 @@ $(function () {
 
         }
     })
+    //partie select mise en forme//
+  
+    $('.dropdown-item').on("click",function() {
+    $("#dropdownMenuButton").html($(this).html(e));
+})
 
     $("#main").resize(function() {
         $("#container").css("width",$(this).css("width"));
     })
-
-
 });
