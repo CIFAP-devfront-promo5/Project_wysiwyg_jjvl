@@ -201,16 +201,6 @@ ul li {
   margin-bottom: 10px;
 }
 
-#main {
-  overflow-y: scroll;
-  height: 500px;
-  width: 100%;
-  font-size: 20px;
-  border: 2px solid black;
-  border-box: none;
-  resize: both;
-}
-
 ul li {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -247,6 +237,7 @@ ul li {
   font-size: 20px;
   border: 2px solid black;
   border-box: none;
+  resize: both;
 }
 
 
