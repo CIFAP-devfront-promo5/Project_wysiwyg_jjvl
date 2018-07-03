@@ -89,9 +89,10 @@ header{
 				height:50px;
 				width:65px;
 				font-weight:bolder;
+			}
 
-				
-			}			
+
+
 		}
 
 		input[type=text], select { //rajout de julie//
@@ -159,6 +160,7 @@ header{
 	
 }
 
+
 ul li {
   -moz-user-select:none;
   -webkit-user-select:none;
@@ -166,6 +168,33 @@ ul li {
 	margin-bottom:10px;
 }   
 .tooltip_{
+
+#main{
+	overflow-y:scroll;
+	height:500px;
+	width:100%;
+	font-size:20px;
+	border:2px solid black;
+	border-box: none;
+	resize: both;
+}
+ul li {
+  -moz-user-select:none;
+  -webkit-user-select:none;
+position: relative;
+}
+
+.disabled li {
+	cursor:not-allowed!important;
+}
+
+.disabled li:hover {
+	border-color:transparent!important;
+}
+
+
+.tooltip_ {
+
     background:#000;
     color:#fff;	
     font-size:13px;	

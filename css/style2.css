@@ -127,4 +127,26 @@ header {
   width: 100%;
   font-size: 20px;
   border: 2px solid black;
-  border-box: none; }
+  border-box: none;
+  resize: both; }
+
+ul li {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  position: relative; }
+
+.disabled li {
+  cursor: not-allowed !important; }
+
+.disabled li:hover {
+  border-color: transparent !important; }
+
+.tooltip_ {
+  background: #000;
+  color: #fff;
+  width: 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  position: absolute;
+  top: 50px;
+  z-index: 2; }

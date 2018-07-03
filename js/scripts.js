@@ -5,6 +5,9 @@ var FontTagFound = false;
 
 $(function () {
 
+    var ie = (typeof document.selection != "undefined" && document.selection.type != "Control") && true;
+    var w3 = (typeof window.getSelection != "undefined") && true;
+
     // Ajoute ou retire la classe active sur les boutons suivants s'ils ont le Node concerné :
     //---------------------------------------------------------------------------------------
 
@@ -192,16 +195,81 @@ $(function () {
         document.execCommand("foreColor", false, color);
     }
 
+    function getCaretPosition(element) {
+        var caretOffset = 0;
+        if (w3) {
+            var range = window.getSelection().getRangeAt(0);
+            var preCaretRange = range.cloneRange();
+            preCaretRange.selectNodeContents(element);
+            preCaretRange.setEnd(range.endContainer, range.endOffset);
+            caretOffset = preCaretRange.toString().length;
+        } else if (ie) {
+            var textRange = document.selection.createRange();
+            var preCaretTextRange = document.body.createTextRange();
+            preCaretTextRange.moveToElementText(element);
+            preCaretTextRange.setEndPoint("EndToEnd", textRange);
+            caretOffset = preCaretTextRange.text.length;
+        }
+        return caretOffset;
+    }
+
+    function getCaretHTMLBegin(element) {
+        var caretOffset = 0;
+        if (w3) {
+            var range = window.getSelection().getRangeAt(0);
+            var preCaretRange = range.cloneRange();
+            preCaretRange.selectNodeContents(element);
+            preCaretRange.setEnd(range.endContainer, range.beginOffset);
+            caretOffset = preCaretRange.toString().length;
+        } else if (ie) {
+            caretOffset = 'n/a';
+        }
+        return caretOffset;
+    }
+
+    function getCaretBegin(element) {
+        var caretOffset = 0;
+        if (w3) {
+            var range = window.getSelection().getRangeAt(0);
+            var preCaretRange = range.cloneRange();
+            preCaretRange.selectNodeContents(element);
+            preCaretRange.setEnd(range.endContainer, range.beginOffset);
+            caretOffset = preCaretRange.toString().length;
+        } else if (ie) {
+            var textRange = document.selection.createRange();
+            var preCaretTextRange = document.body.createTextRange();
+            preCaretTextRange.moveToElementText(element);
+            preCaretTextRange.setEndPoint("EndToStart", textRange);
+            caretOffset = preCaretTextRange.text.length;
+        }
+        return caretOffset;
+    }
+
+    function getSelectionBegin(element) {
+        var caretOffset = 0;
+        if (w3) {
+        }
+        else if (ie) {
+            var textRange = document.selection.createRange();
+            var preCaretTextRange = document.body.createTextRange();
+            preCaretTextRange.moveToElementText(element);
+            preCaretTextRange.setEndPoint("EndToStart", textRange);
+            caretOffset = preCaretTextRange.text.length;
+        }
+        return caretOffset;
+    }
+
     var colorWell;
     var defaultColor = "#0000ff";
 
     initialiseLeColorPicker();
 
 
-    // $('#main').on('input', function () {
-    //     console.log(this);
-    //     // console.log(getCaretPosition(this));
-    // });
+    $('#main').on('input', function () {
+        var el = $(this).get(0);
+        console.log(getCaretPosition(el));
+
+    });
 
     // S'il y a un changement dans le select des headings,
     // on passe la commande "Format-block"
@@ -218,6 +286,8 @@ $(function () {
     // en parcourant les nodes qui encapsulent la selection.
 
     $("#main").on("click", function () {
+
+
         if ($(".visuel").hasClass("activeOnglet"))
             rend_les_boutons_actifs_ou_inactifs();
     });
@@ -253,6 +323,7 @@ $(function () {
             // Transforme du texte HTML en chaine de caractère :
             //--------------------------------------------------
             $("#main").text($("#main").html());
+            $("#tools").addClass("disabled");
             // La fonction text() est comme la fonction html()
             // sauf qu'elle prend un texte brut et ne construit pas le DOM
 
@@ -276,6 +347,7 @@ $(function () {
         //-------------------------------------------------------------------
         if ($(".code").hasClass("activeOnglet"))
         {
+            $("#tools").removeClass("disabled");
             // On transforme une chaine de caractères
             // en du code pouvant géngérer du DOM
             var HTML_content = $("#main").html();
@@ -290,8 +362,12 @@ $(function () {
         }
     })
     //partie select mise en forme//
-
+  
     $('.dropdown-item').on("click",function() {
     $("#dropdownMenuButton").html($(this).html(e));
 })
+
+    $("#main").resize(function() {
+        $("#container").css("width",$(this).css("width"));
+    })
 });
