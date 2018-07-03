@@ -30,24 +30,26 @@
             </section>
             <section id="tools">
                 <ul>
-                    <li unselectable="on" class="first">
-                        <select class="heading">
-                            <option value="P">Paragraphe</option>
-                            <option value="H1">Titre 1</option>
-                            <option value="H2">Titre 2</option>
-                            <option value="H3">Titre 3</option>
-                            <option value="H4">Titre 4</option>
+                    <li unselectable="on" class="first" > 
+                        <!-- //essais dropdown// -->
+                        <!-- rajout classe dropdown menu et items en html 36 et en css le t1 110 et en js 292-294 -->
+                        <select id="dropdownMenuButton" class="heading">
+                            <option value="P" class="dropdown-item">Paragraphe</option>
+                            <option value="H1" class="dropdown-item t1">Titre 1</option>
+                            <option value="H2" class="dropdown-item t2">Titre 2</option>
+                            <option value="H3" class="dropdown-item t3">Titre 3</option>
+                            <option value="H4" class="dropdown-item t4">Titre 4</option>
                         </select>
                     </li>
                     <li unselectable="on" class="icone bold"
-                        data-title="Afficher en gras">
+                        data-title="Gras">
                         <a href="#"></a>
                         <i class="glyphicon glyphicon-bold"></i>
                     </li>
                     <li unselectable="on" class="icone italic"
-                        data-title=" Afficher en italique">
+                        data-title=" Italique">
                         <a href="#"></a>
-                        <i class="glyphicon glyphicon-italic"></i>
+                        <i class="glyphicon glyphicon-italic"></i>  
                     </li>
                     <li unselectable="on"
                         class="icone insertUnorderedList"
@@ -84,21 +86,20 @@
                         <i class="glyphicon glyphicon-align-justify"></i>
                     </li>
                     <li unselectable="on" class="icone createLink"
-                        data-title="Insérer un lien">
+                        data-title="Insérer lien">
                         <a href="#"></a>
                         <i class="fas fa-link"></i>
                     </li>
                     <li unselectable="on" class="icone unlink"
-                        data-title="Supprimer le lien">
+                        data-title="Suppr lien">
                         <a href="#"></a>
                         <i class="fas fa-unlink"></i>
                     </li>
-                    <li unselectable="on" class="icone foreColor"
-                        data-title="Couleur du texte">
+                    <li unselectable="on" class="icone"
+                        data-title="Couleur">
                  <!--        <a href="#"></a> -->
-                        <i class="glyphicon glyphicon-font letter">
-                            <input type="color" value="#ff0000" id="colorWell"
-                        class="toto">  
+                        <i class="glyphicon glyphicon-font bas  foreColor">
+                            <input type="color" value="#ff0000" id="colorWell">  
                         </i>
                           
                     </li>
@@ -106,14 +107,14 @@
                         class="icone insertImage">
                         <a href="#"></a>
                         <i
-                                class="glyphicon glyphicon-picture"
-                                data-title="Insérer une image"></i>
+                                class="glyphicon glyphicon-picture bas"
+                                data-title="Insérer image"></i>
                     </li>
                     <li unselectable="on"
                         class="icone removeFormat"
-                        data-title=" Effacer le style">
+                        data-title=" Effacer">
                         <a href="#"></a>
-                        <i class="glyphicon glyphicon-erase"></i>
+                        <i class="glyphicon glyphicon-erase bas"></i>
                     </li>
 
                 </ul>

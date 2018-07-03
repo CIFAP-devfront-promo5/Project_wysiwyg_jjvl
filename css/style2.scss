@@ -107,6 +107,11 @@ header{
 					padding-left: 30px;
 					font-size: 28px;
 			}
+			.t1{
+				font-size:35px;
+				text-transform:uppercase;
+				font-weight:bold;
+			}
 		}
 		.icone{ //rajout de julie//
 			cursor:pointer;
@@ -126,10 +131,12 @@ header{
 			padding-top:10px;
 			box-sizing:border-box;
 			font-size:25px;
-			i.letter{
-				padding-left:3px!important;
+			i.bas{
+			margin-top:10px;
+			height:60px;
+			vertical-align:bottom;
+			text-align:center;
 			}
-		}
 		a{
 			text-decoration:none;
 		}
@@ -137,44 +144,48 @@ header{
 		border: none;
 		background-color:#ccc;
 		height: 15px;
-		width:35px;
-		display: flex;
+		width:30px;
+		display:block;
 		// flex-direction: column;
-		// // justify-content: flex-start;
+		// justify-content: flex-start;
 		}
-		.foreColor{
-			margin-top:10px;
-			height:60px;
-			vertical-align:bottom;
-		}
+		// .foreColor{
+		// 	margin-top:10px;
+		// 	height:60px;
+		// 	vertical-align:bottom;
+		// }
 	}
 		
 	
 }
+
+ul li {
+  -moz-user-select:none;
+  -webkit-user-select:none;
+	position: relative;
+	margin-bottom:10px;
+}   
+.tooltip_{
+    background:#000;
+    color:#fff;	
+    font-size:13px;	
+  	text-align:center;
+    width:75px;
+    border: 1px solid transparent;
+    border-radius:5px;
+    position:absolute;
+    top:50px;
+    z-index:2;
+}
+}
 #main{
+	padding:10px;
 	overflow-y:scroll;
 	height:500px;
 	width:100%;
 	font-size:20px;
 	border:2px solid black;
 	border-box: none;
-}
-ul li {
-  -moz-user-select:none;
-  -webkit-user-select:none;
-position: relative;
-
-
-}   
-.tooltip_ {
-    background:#000;
-    color:#fff;			
-    width:30px;
-    border: 1px solid transparent;
-    border-radius:20px;
-    position:absolute;
-    top:50px;
-    z-index:2;
 }
 
 
