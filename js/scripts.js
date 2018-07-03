@@ -3,12 +3,13 @@ var HeadingFound = false;
 var FontTagFound = false;
 var colorWell;
 var defaultColor = "#0000ff";
+var ie = (typeof document.selection != "undefined" && document.selection.type != "Control") && true;
+var w3 = (typeof window.getSelection != "undefined") && true;
 
 
 $(function () {
 
-    var ie = (typeof document.selection != "undefined" && document.selection.type != "Control") && true;
-    var w3 = (typeof window.getSelection != "undefined") && true;
+
 
     // Ajoute ou retire la classe active sur les boutons suivants s'ils ont le Node concerné :
     //---------------------------------------------------------------------------------------
@@ -24,9 +25,16 @@ $(function () {
 
     // S'il y a un changement dans le select des headings,
     // on passe la commande "Format-block"
-    $('.heading').on("change", function () {
-        document.execCommand("formatBlock", false, "<" + $(this).val() + ">");
+    $('.dropdown-item').on("click", function () {
+        var format = $(this).attr('class').split(' ')[2];
+        document.execCommand("formatBlock", false, "<" + format + ">");
+        var t = format;
+        $("#dropdownMenuButton").html('<' + t +
+            ' style="margin:0;display:inline-block;">'
+            + $(this).html() +
+            '</' + t + '>');
     });
+
 
     // Si on clique à l'intérieur du contenteditable :
     // On vérifie s'il y a un text-align ou une balise sémantique :
@@ -37,8 +45,6 @@ $(function () {
     // en parcourant les nodes qui encapsulent la selection.
 
     $("#main").on("click", function () {
-
-
         if ($(".visuel").hasClass("activeOnglet"))
             rend_les_boutons_actifs_ou_inactifs();
     });

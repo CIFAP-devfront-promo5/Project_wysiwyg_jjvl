@@ -51,7 +51,11 @@ function rend_les_boutons_actifs_ou_inactifs() {
             case 'H4':
             case 'H5':
             case 'H6':
-                $('[value="' + Node.tagName + '"]').prop("selected", true);
+                $('#dropdownMenuButton').html('<' + Node.tagName + ' ' +
+                    '                       style="margin:0;display:inline-block;">'
+                                                    + $('.' + Node.tagName).html() +
+                                              '</' + Node.tagName + '>');
+                // $('[value="' + Node.tagName + '"]').prop("selected", true);
                 // On a trouvé un heading !
                 if (Node.tagName[0] == 'H')
                     HeadingFound = true;
@@ -65,7 +69,7 @@ function rend_les_boutons_actifs_ou_inactifs() {
     // c'est qu'il s'agit d'un P (par élimination)
 
     if (!HeadingFound)
-        $('[value="P"]').prop("selected", true);
+        $('#dropdownMenuButton').html("Paragraphe");
 
     // Si on n'a trouvé aucun font en parcourant les nodes de la selection,
     // c'est que la couleur du texte est noir (valeur par défaut)
