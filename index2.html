@@ -33,13 +33,27 @@
                     <li unselectable="on" class="first" > 
                         <!-- //essais dropdown// -->
                         <!-- rajout classe dropdown menu et items en html 36 et en css le t1 110 et en js 292-294 -->
-                        <select id="dropdownMenuButton" class="heading">
-                            <option value="P" class="dropdown-item">Paragraphe</option>
-                            <option value="H1" class="dropdown-item t1">Titre 1</option>
-                            <option value="H2" class="dropdown-item t2">Titre 2</option>
-                            <option value="H3" class="dropdown-item t3">Titre 3</option>
-                            <option value="H4" class="dropdown-item t4">Titre 4</option>
-                        </select>
+                        <!--<select id="dropdownMenuButton" class="heading">-->
+                            <!--<option value="P" class="dropdown-item">Paragraphe</option>-->
+                            <!--<option value="H1" class="dropdown-item t1">Titre 1</option>-->
+                            <!--<option value="H2" class="dropdown-item t2">Titre 2</option>-->
+                            <!--<option value="H3" class="dropdown-item t3">Titre 3</option>-->
+                            <!--<option value="H4" class="dropdown-item t4">Titre 4</option>-->
+                        <!--</select>-->
+                        <div class="dropdown heading">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Paragraphe
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item pp" href="#">Paragraphe</a>
+                                <a class="dropdown-item t1" href="#">Titre 1</a>
+                                <a class="dropdown-item t2" href="#">Titre 2</a>
+                                <a class="dropdown-item t3" href="#">Titre 3</a>
+                                <a class="dropdown-item t4" href="#">Titre 4</a>
+                            </div>
+                        </div>
+
                     </li>
                     <li unselectable="on" class="icone bold"
                         data-title="Gras">
