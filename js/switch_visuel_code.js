@@ -19,7 +19,7 @@ $(function() {
             $(".icone").removeClass("active");
 
             // Apparence "disabled" des boutons et select :
-            $(".first , .icone").css("opacity", 0.5);
+            $(".headings , .icone").css("opacity", 0.5);
 
             $("select").attr("disabled", true);
             $(".code , .visuel").toggleClass("activeOnglet").toggleClass("inactiveOnglet");
@@ -45,7 +45,7 @@ $(function() {
             $(".code , .visuel").toggleClass("activeOnglet").toggleClass("inactiveOnglet");
 
             //Apparence "enabled" des boutons et select :
-            $(".icone , .first").css("opacity", 1);
+            $(".icone , .headings").css("opacity", 1);
             $("select").attr("disabled", false);
 
         }
