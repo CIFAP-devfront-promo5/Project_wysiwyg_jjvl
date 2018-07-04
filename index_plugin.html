@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wysiwyg</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+
+<body>
+    <div id="container"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="js/fonctions_boutons_click.js"></script>
+    <script type="text/javascript" src="js/fonctions_colorpicker.js"></script>
+    <!--<script type="text/javascript" src="js/scripts.js"></script>-->
+    <script type="text/javascript" src="js/infobull.js"></script>
+    <script type="text/javascript" src="js/switch_visuel_code.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    <script  type="text/javascript">
+        $(function() {
+
+            $("#container").initiateEditor({
+                "list_functions":
+                    [
+                        'headings',
+                        'bold',
+                        'italic',
+                        'insertUnorderedList',
+                        'insertOrderedList',
+                        'justifyLeft',
+                        'justifyCenter',
+                        'justifyRight',
+                        'justifyFull',
+                        'createLink',
+                        'unlink',
+                        'foreColor',
+                        'insertImage',
+                        'removeFormat'
+                    ],
+                "dimensions": {
+                    "width": "800px",
+                    "height": "800px"
+                },
+                "responsive": true,
+                "backGroundColorFunctions": "#C00",
+                "VisuCode": true
+            });
+        })
+    </script>
+
+
+</body>
+
+</html>
